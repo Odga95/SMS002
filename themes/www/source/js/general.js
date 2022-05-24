@@ -15,10 +15,16 @@ document.addEventListener("DOMContentLoaded", function () {
 function menuOpen() {
 
     const display = document.querySelector('.navbar-nav').style.display;
-    if (!display) {
-        document.querySelector('.navbar-nav').style.display = 'block' 
+    if (!display || display === 0) {
+        document.querySelector('.navbar-nav').style.display = 'block'
+        setTimeout(()=>{
+            document.querySelector('.navbar-nav').style.opacity = '1'   
+           },2);
     }
     else {
-        document.querySelector('.navbar-nav').style.display = '';
+        document.querySelector('.navbar-nav').style.opacity = '' 
+        setTimeout(()=>{
+            document.querySelector('.navbar-nav').style.display = ''   
+           },1);
     }
 }

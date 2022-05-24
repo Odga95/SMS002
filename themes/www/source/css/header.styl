@@ -2,16 +2,18 @@
 
 header
     position relative
+    width: 100%
     .bg-color
         border 0px
         background-color: transparent
-        transition 1.5s
         .navbar
+            position: fixed
+            width 100%
             transition 0.4s
-            padding: 15px 0px
+            padding: 10px 0px
+            height: fit-content
             @media tablet
-                padding: 0px
-            
+                padding: 20px 0px
         .menu
             width: 100%
             display flex
@@ -29,30 +31,39 @@ header
                 margin-right: 20px
         .navbar-fixed-top
             background: white
-            padding: 20px 0px
             position: fixed
-            width: 100.07%
+            width: 100%
+            transition: 1s
             -webkit-box-shadow: 0px 3px 5px -1px hsla(0, 0%, 0%, 0.2);
+            @media tablet
+                padding: 10px 0px
         .navbar-brand
+            position: absolute
+            top 50%
+            transform: translate(15%, -50%);
             height:40px
             width: 150px
-            margin-top: auto
-            margin-bottom: auto
+            z-index 100
             @media tablet 
                 height:65px
                 width: 150px
+                margin-top: auto
+                margin-bottom: auto
             img
                 height: 100%
                 object-fit: cover
                 margin auto
         .navbar-nav
-            padding: 15px 0px
             width 100%
-            display: none
+            display: block
             position: absolute
             top: 0
-            margin-top 65px
+            opacity: 0
+            margin-top 49px
+            z-index 1
+            transition 1s
             @media tablet
+                opacity: 1
                 position relative
                 margin-top 0px
                 
@@ -70,7 +81,7 @@ header
                     border none
 
                 a
-                    padding: 0px 20px;
+                    margin: 0px 20px;
                     font-size 13px
                     line-height 50px
                     font-weight 600

@@ -11,7 +11,7 @@ fontfam3 = "Poppins", sans-serif;
 
 color-white = #ffffff
 color-black = #000000
-color-letter = hsla(0, 0%, 0%, 0.61)
+color-letter = hsla(0, 0%, 0%, 0.5)
 color-first = #00cdd8
 color-second = #EC625F
 color-third = #9626ca
@@ -130,8 +130,7 @@ body
   color color-letter
   font-family fontfam3
   font-size font-l
-  background: blue
-
+  
 .container
   padding 0 20px
   max-width 1024px
@@ -145,10 +144,13 @@ body
 
 
 .d-flex
+  transition 1s
   display: flex
 .d-block
+  transition 1s
   display: block
 .d-none
+  transition 1s
   display: none
 
 .align-ic
@@ -156,5 +158,18 @@ body
 
 // INDEX
 
-  .cabecera
-    height: 200vh
+.cabecera
+  height: 100vh
+  width: 100%
+
+.cabecera_section
+  width: 100%
+  height: 100%
+  padding: 90px 40px
+
+.cabecera_title
+  margin-bottom: 15px
+
+
+.main
+  height: 100vh
