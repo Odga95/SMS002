@@ -5,12 +5,42 @@ header
     .bg-color
         border 0px
         background-color: transparent
-        transition all 0.3s
+        transition 1.5s
+        .navbar
+            transition 0.4s
+            padding: 15px 0px
+            @media tablet
+                padding: 0px
+            
+        .menu
+            width: 100%
+            display flex
+            justify-content: right 
+            align-items: center
+            height: 30px
+            img
+                margin-top: auto
+                margin-bottom: auto
+                height: 100%
+                width: fit-content
+            @media tablet
+                display none
+            img
+                margin-right: 20px
+        .navbar-fixed-top
+            background: white
+            padding: 20px 0px
+            position: fixed
+            width: 100.07%
+            -webkit-box-shadow: 0px 3px 5px -1px hsla(0, 0%, 0%, 0.2);
         .navbar-brand
-            height:65px
+            height:40px
             width: 150px
             margin-top: auto
             margin-bottom: auto
+            @media tablet 
+                height:65px
+                width: 150px
             img
                 height: 100%
                 object-fit: cover
@@ -18,23 +48,40 @@ header
         .navbar-nav
             padding: 15px 0px
             width 100%
-            display: flex
+            display: none
+            position: absolute
+            top: 0
+            margin-top 65px
+            @media tablet
+                position relative
+                margin-top 0px
+                
+
             justify-content: center
             align-items: center
+            @media tablet
+                display flex
             li
+                border-bottom:  1px solid color-letter
                 list-style: none
+                background: white
+                @media tablet
+                    background: transparent
+                    border none
+
                 a
                     padding: 0px 20px;
                     font-size 13px
-                    line-height 54px
+                    line-height 50px
                     font-weight 600
                     text-transform uppercase
                     text-decoration: none
-                    color: #000000b3;
+                    color: rgba(0, 0, 0, 0.5);
                     background-color: transparent;
                     transition: all 0.3s ease;
                     position: relative;
                     font-weight: 600;
+                    display: block
                 a:hover
                     color: color-first
                 
