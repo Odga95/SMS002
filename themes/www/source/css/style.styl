@@ -12,9 +12,14 @@ fontfam3 = "Poppins", sans-serif;
 color-white = #ffffff
 color-black = #000000
 color-letter = hsla(0, 0%, 0%, 0.5)
-color-first = #00cdd8
-color-second = #EC625F
+color-title = rgb(13, 0, 131)
+color-first = #01a6af
+color-second = #d64961
 color-third = #9626ca
+color-fondo-first   = rgba(1, 166, 175, 0.1)
+color-fondo-second   = rgba(214, 73, 96, 0.1)
+color-fondo-third   = rgba(150, 38, 202, 0.1)
+
 
 
 movil = 'screen and (min-width: 576px)'
@@ -52,12 +57,20 @@ transition()
   color color-black
 .color-letter
   color color-letter
+.color-title
+  color color-title
 .color-first
   color color-first
 .color-second
   color color-second
 .color-third
   color color-third
+.color-fondo-first
+  color color-fondo-first
+.color-fondo-second 
+  color color-fondo-second
+.color-fondo-third
+  color color-fondo-third
 
 
 .border-color-white
@@ -80,12 +93,20 @@ transition()
   background-color color-black
 .back-color-letter
   background-color color-letter
+.back-color-title
+  background-color color-title
 .back-color-first
   background-color color-first
 .back-color-second
   background-color color-second
 .back-color-third
   background-color color-third
+.back-color-fondo-first
+  background-color color-fondo-first
+.back-color-fondo-second 
+  background-color color-fondo-second
+.back-color-fondo-third
+  background-color color-fondo-third
 
 //Estilos generales
 
@@ -164,12 +185,92 @@ body
 
 .cabecera_section
   width: 100%
-  height: 100%
-  padding: 90px 40px
+  height: 100vh
+  padding: 70px 40px
+  z-index: 2
+  @media tablet
+    padding-top 200px
+    padding-left 70px 
+    width: 50%
 
 .cabecera_title
-  margin-bottom: 15px
-
+  margin-bottom:auto
+  margin-top: auto
+  p
+    font-weight: 600
+    margin-left 30px
+    margin-bottom:auto
+    margin-top: auto
 
 .main
   height: 100vh
+
+.cabecera_button
+  width: fit-content
+  height: fit-content
+  text-align: left
+  margin-bottom:auto
+  margin-top: auto
+  border-radius 10px
+  @media tablet
+    margin-top 50px
+
+.cabecera_button-contact
+  width: fit-content
+  height: auto
+  padding: 20px 5px
+  border: none;
+  font-weight: 600
+  border-radius 10px
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: 0.5s
+
+.cabecera_button-contact:hover
+  background: transparent
+
+.cabecera_aside
+  height: 100% !important
+  width:50%
+  position: absolute
+  top 0
+  right:0
+  z-index: -1
+  overflow: hidden
+  .cabecera_aside_img
+    width: 100%
+    height: 100%
+
+  img
+    width: 300%
+    height: 150%
+    border-radius 100%
+    object-fit: cover
+    margin-right: auto
+    @media tablet
+      width: 100%
+      height: 100%
+      -webkit-transform:scale(2);
+      transform:scale(2)
+      border-radius 100%
+      display: block
+      margin-left: 70%
+      margin-right: auto
+
+.banner
+  width: 100%
+  height: fit-content
+  padding: 90px 70px
+  display: flex
+  flex-direction: column
+  align-items: center
+  .banner_title
+    margin-bottom: 20px
+    
+
+
+
+
+
+  
