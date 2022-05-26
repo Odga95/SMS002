@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
         var head = document.querySelector(".navbar")
         head.classList.toggle("navbar-fixed-top", window.scrollY > 0);
-        console.log('hola')
 
     })
 });
