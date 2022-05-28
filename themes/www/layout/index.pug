@@ -63,14 +63,35 @@ block body-main
     
     
     
-    .banner.back-color-fondo-first
-      img(src="/img/books.svg", alt="")
-      .banner_title.color-title
-        h2 Testimonials
-      .banner_paragraph
-        p tillo nobis doloribus tenetur enim expedita ea necessitatibus odio officiis nulla culpa voluptas. Nostrum labore suscipit beatae cumque!
-    
-    .banner_tex_img
+    .banner_testimonial.back-color-white
+      .banner_box
+        .img-testimonial 
+          img.testimonial(src="/img/doge.svg", alt="")
+        .text-testimonial
+          h3.font-l David Burbano Guamanga
+          .fa-solid.fa-quote-left.color-first
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illo esse facilis minima cupiditate sed quibusdam inventore voluptates quasi velit! Inventore veniam iusto aperiam enim veritatis distinctio esse odit officia.
+          .fa-solid.fa-quote-right.color-first
+      
+      .banner_box2
+        .img-testimonial 
+          img.testimonial(src="/img/usertestimonial.svg", alt="")
+        .text-testimonial
+          h3.font-l Diego Rivera
+          .fa-solid.fa-quote-left.color-first
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illo esse facilis minima cupiditate sed quibusdam inventore voluptates quasi velit! Inventore veniam iusto aperiam enim veritatis distinctio esse odit officia.
+          .fa-solid.fa-quote-right.color-first
+
+      .banner_box
+        .img-testimonial 
+          img.testimonial(src="/img/usertestimonial2.svg", alt="")
+        .text-testimonial
+          h3.font-l Vanessa Londoño
+          .fa-solid.fa-quote-left.color-first
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illo esse facilis minima cupiditate sed quibusdam inventore voluptates quasi velit! Inventore veniam iusto aperiam enim veritatis distinctio esse odit officia.
+          .fa-solid.fa-quote-right.color-first
+
+    .banner_tex_img.back-color-fondo-fourth 
       .banner_doble-left
         img(src="/img/business_chat.svg", alt="")
       .banner_doble-right
@@ -86,9 +107,6 @@ block body-main
       .banner_img_box 
         .banner_img 
           img(src="/img/people.svg", alt="")
-
-
-
 
 block body-footer
   include includes/footer
