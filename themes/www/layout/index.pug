@@ -4,6 +4,8 @@ block body-header
   include includes/header
 
 block body-main
+
+  //-  Cabecera
   .cabecera
     .cabecera_section
       .cabecera_title.color-title
@@ -17,7 +19,10 @@ block body-main
       .cabecera_aside_img
         img(src="/img/header.svg", alt="", srcset="").cabecera_img
         
+
+  //-  Main
   .main
+    //-  Banner de texto y titulo + fondo imagen
     .banner.back-color-fondo-first
       img(src="/img/working.svg", alt="")
       .banner_title.color-title
@@ -26,7 +31,17 @@ block body-main
         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis itaque quas aut! Tempora sequi voluptates non eveniet libero hic suscipit quibusdam nulla, inventore, adipisci quis doloribus, minima deleniti obcaecati tempore? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse ea eius provident iure qui tenetur voluptatibus asperiores nemo quia, inventore illo officiis tempore, ducimus voluptatum rerum est explicabo repellendus magnam.
         p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, beatae nihil deleniti illo nobis doloribus tenetur enim expedita ea necessitatibus odio officiis nulla culpa voluptas. Nostrum labore suscipit beatae cumque!
     
+    //-  Banner Services
+    .banner_cards.back-color-white
+      .card_box 
+        .card_img
+          img(src="", alt="", srcset="")
+          .card_info Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia sapiente at deserunt quasi laborum similique alias modi nisi qui et doloribus ex illum quisquam, expedita laboriosam tempora, consequuntur dolor asperiores!
+        .card_text 
+          .card_title Title service
+          .card_icon 
 
+    //-  Banner Estadística de la empresa
     .banner_counter.back-color-white
       .counter_box
         .counter_icon.d-flex.align-ic.justify-c
@@ -51,7 +66,9 @@ block body-main
           .fa-solid.fa-business-time.fa-2xl
         h2.counter_number.d-flex.align-ic.justify-c.color-first 9.999+
         .counter_text.d-flex.align-ic.justify-c.color-title Years of experience
-          
+    
+
+    //-  Banner de texto y titulo + doble imagen de fondo
     .banner_doble.back-color-fondo-fourth
       .banner_doble-left
         img(src="/img/project_complete.svg", alt="")
@@ -62,8 +79,9 @@ block body-main
         p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, beatae nihil deleniti illo nobis doloribus tenetur enim expedita ea necessitatibus odio officiis nulla culpa voluptas. Nostrum labore suscipit beatae cumque!
     
     
-    
+    //-  Banner testiomonials
     .banner_testimonial.back-color-white
+
       .banner_box
         .img-testimonial 
           img.testimonial(src="/img/doge.svg", alt="")
@@ -91,6 +109,8 @@ block body-main
           p Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illo esse facilis minima cupiditate sed quibusdam inventore voluptates quasi velit! Inventore veniam iusto aperiam enim veritatis distinctio esse odit officia.
           .fa-solid.fa-quote-right.color-first
 
+
+    //- Baner texto - imagen + fodo con doble imagen
     .banner_tex_img.back-color-fondo-fourth 
       .banner_doble-left
         img(src="/img/business_chat.svg", alt="")
