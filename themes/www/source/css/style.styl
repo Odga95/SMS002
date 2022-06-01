@@ -198,9 +198,10 @@ body
 
 // INDEX
 
-.cabecera
+.cabecera,.cabecera_blog
   height: 100vh
   width: 100%
+
 
 .cabecera_section
   background-color:rgba(255, 255, 255, 0.7)
@@ -238,6 +239,15 @@ body
     @media movil-xs
       display: block
 
+.cabecera_blog
+  height: 50vh
+  .cabecera_section
+    height: 50vh !important
+  .cabecera_aside
+    height: 50vh !important
+    width 50%
+    @media tablet
+      width 40%
 .main
   height: 100%
 
@@ -657,4 +667,6 @@ body
       font-size: 80%
       h2
         text-align: left
-      
+
+
+//
