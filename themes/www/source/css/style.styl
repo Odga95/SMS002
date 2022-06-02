@@ -198,7 +198,9 @@ body
 
 // INDEX
 
-.cabecera,.cabecera_blog
+.cabecera,
+.cabecera_blog,
+.cabecera_post
   height: 100vh
   width: 100%
 
@@ -248,7 +250,25 @@ body
     width 50%
     @media tablet
       width 40%
+
+.cabecera_post
+  height: 100vh
+  .cabecera_section
+    height: 100vh !important
+  .cabecera_aside
+    height: 100vh !important
+    width 50%
+    @media tablet
+      height: 100%
+    img
+      border-radius 700px !important
+      width: 100%
+      height: 100%
+      object-fit: none 
+      
+      
 .main
+  width 100%
   height: 100%
 
 .cabecera_button
@@ -289,28 +309,26 @@ body
   .cabecera_aside_img
     width: 100%
     height: 100%
-
-  img
-    width: 300%
-    height: 150%
-    border-radius 100%
-    object-fit: cover
-    margin-right: auto
-    @media tablet
+    img
       width: 100%
       height: 100%
-      -webkit-transform:scale(2);
-      transform:scale(2)
       border-radius 100%
-      display: block
-      margin-left: 70%
       margin-right: auto
+      @media tablet
+        width: 100%
+        height: 100%
+        -webkit-transform:scale(2);
+        transform:scale(2)
+        border-radius 100%
+        display: block
+        margin-left: 70%
+        margin-right: auto
 
 .banner_doble
   position: relative
 
 
-// Banner imagen medio y laterales
+// INDEX - Banner imagen medio y laterales
 .banner,.banner_doble
   width: 100%
   height: fit-content
@@ -369,7 +387,7 @@ body
     bottom  0 
     right  0
 
-// Banner contador de numeros
+// INDEX - Banner contador de numeros
 .banner_counter
   display: flex
   width 100%
@@ -482,7 +500,7 @@ body
       @media movil-xs
         border-radius 10px
 
-// Enlaces
+// INDEX - Enlaces
 .enlace
   text-decoration: none
   color: color-first
@@ -490,7 +508,7 @@ body
 
 
 
-// testimonials 
+// INDEX - testimonials 
 
 .banner_testimonial
   width: 100%
@@ -514,8 +532,6 @@ body
   display flex
   width: 100%
 
-  
-  // la propiedad line-clamp indica la linea de puntuaciones suspensivas
 .banner_box,.banner_box2
   display flex
   justify-content: center
@@ -669,4 +685,133 @@ body
         text-align: left
 
 
-//
+// BLOG
+
+.blog_container 
+  width: 75%
+  height: 100%
+  padding: 50px 70px
+  display flex
+  flex-direction: column
+  align-items: center
+
+  .blog_box
+    width: 100%
+    height: 100%
+    .divide
+      margin-top 40px
+      margin-bottom:40px
+      border-bottom: 0.4px dotted rgb(177, 177, 177)
+
+    
+    .box_container
+      display: flex
+      flex-direction: column
+      justify-content: left
+      align-items: flex-start
+      flex-direction: row
+
+      .blog_img
+        width: 30%
+        height: 250px
+        padding: 0px 10px
+        img
+          width: 100%
+          height: 100%
+          border-radius 10px
+          object-fit: cover
+      .blog_text
+        width: 70%
+        height: 100%
+        padding: 0px 10px
+        h2
+          font-size: 110%
+        .blog_info
+          width: 100%
+          height: 100%
+          display: flex
+          font-size: 65%
+          color color-letter
+          padding: 0px 15px
+          .blog_category,
+          .blog_tag,
+          .blog_date,
+          .blog_autor
+            font-weight: 600
+            display: flex
+            margin-right: 5px
+            margin-left:5px
+            align-items: flex-end
+          p
+            margin-right: 15px
+            margin-left:5px
+            font-weight: 400
+            font-size: 80%
+
+        .blog_paragrph
+          font-size: 70%
+          line-height: 1.9
+          font-style italic
+          margin-top 20px
+          width: 100%
+          height:120px
+          display -webkit-box
+          -webkit-line-clamp 4
+          -webkit-box-orient vertical
+          overflow hidden
+          text-overflow ellipsis
+
+    .box_link   
+      margin-left 30%
+      .blog_button
+        border none
+        border-radius 10px
+        padding: 15px
+        font-weight: 600
+        transition 0.4s
+      :hover
+        background: gray 
+        color white  
+
+      .fa-share
+        text-decoration none
+        border-radius 100%
+        border 0.5px solid gray
+        padding: 11px
+        margin-left: 40px
+        transition 0.4s
+.cat-tag
+  width: 25%
+  height: 100%
+  padding: 50px 40px
+  display flex
+  flex-direction: column
+  align-items: center
+  text-align: left
+  .box_category,.tag
+    width 100%
+    h3
+      margin-bottom: 20px
+  ul
+    margin-bottom: 20px
+    li
+      list-style none
+      a
+        text-decoration: none
+        font-size: 80%
+        font-weight: 600
+      :hover
+        color gray
+      ::before
+        content: ' - '
+
+//POST
+
+.post
+  width: 100%
+  height: 100%
+
+  
+
+    
+
