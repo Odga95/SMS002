@@ -200,6 +200,7 @@ body
 
 .cabecera,
 .cabecera_blog,
+.cabecera_about,
 .cabecera_post
   height: 100vh
   width: 100%
@@ -265,7 +266,13 @@ body
       width: 100%
       height: 100%
       object-fit: none 
-      
+
+.cabecera_about
+  .cabecera_aside
+    width: 100% !important
+    .cabecera_aside_img
+      width: 100% !important
+
       
 .main
   width 100%
@@ -829,16 +836,48 @@ body
     font-weight: 400
     font-size: 80%
 
-.post
+.post,.about
   width: 100%
   height: 100%
   padding: 70px 120px
+  display: flex
+  flex-direction: column
   p,h2
     margin-bottom: 20px
   h2
+    color color-title
     margin-top 20px
   h3
     margin-top 20px
+    margin-bottom: 10px
+    color color-title
+  h4
+    margin-top 20px
+    margin-bottom: 10px
+    color color-title
+  img
+    margin: auto
+    margin-top 20px
+    margin-bottom:  20px
+    width: 600px
+    height: 400px
+    border-radius 10px
+    object-fit: cover
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+
+  ul
+    margin-top 20px
+    margin-bottom:  20px
+    li
+      margin-left 25px
+      a 
+        width: 100%
+        display: flex
+        margin-bottom:  20px
+        text-decoration: none
+
+
+    
 
   
 
