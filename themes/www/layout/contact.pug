@@ -4,6 +4,23 @@ block body-header
   include includes/header
 
 block body-main
-        
+  .cabecera_contact
+    .cabecera_section.color-white.back-color-first
+      h1 Vamos hacer algo increible Juntos
+      p Quis ipsum dolor sit amet consectetur, adipisicing elit iste quam.
+    .cabecera_aside
+      .cabecera_aside_img
+        img(src="/img/Captura.PNG" alt="" srcset="").cabecera_img
+  .contact  
+    .box_contact
+      h2 
+      p Let`s talk about your project
+      form(id='contactForm' name='contactForm').form
+        input#name(type='text' placeholder='Nombre' name='name' title='nombre', required)
+        input#email(type='email' placeholder='Email' name='email' title='email' required)
+        input#tel.form-control(type='text' placeholder='Teléfono' name='tel' title='telefono')
+        textarea#msg(type='text' placeholder='Mensaje' name='msg' title='mensaje')
+        input#bpriva(type='submit' value="submit")
+
 block body-footer
   include includes/footer
