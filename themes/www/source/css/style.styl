@@ -246,6 +246,7 @@ body
   height: 50vh
   .cabecera_section
     height: 50vh !important
+    width: 100%
   .cabecera_aside
     height: 50vh !important
     width 50%
@@ -256,24 +257,18 @@ body
   height: 100vh
   .cabecera_section
     height: 100vh !important
+    width: 100%
   .cabecera_aside
     height: 100vh !important
-    width 50%
+    width: 50%
     @media tablet
       height: 100%
     img
-      border-radius 700px !important
+      border-radius 100% !important
       width: 100%
       height: 100%
       object-fit: none 
 
-.cabecera_about
-  .cabecera_aside
-    width: 100% !important
-    .cabecera_aside_img
-      width: 100% !important
-
-      
 .main
   width 100%
   height: 100%
@@ -334,6 +329,15 @@ body
 .banner_doble
   position: relative
 
+.cabecera_about
+  .cabecera_section
+    width: 100% !important
+  .cabecera_aside
+    width: 100% !important  
+    .cabecera_aside_img
+      width: 100% !important
+      img
+        margin-left: 0%
 
 // INDEX - Banner imagen medio y laterales
 .banner,.banner_doble
@@ -829,14 +833,17 @@ body
     display: flex
     margin-right: 5px
     margin-left:5px
-    align-items: flex-end
+    align-items: flex-start
+    max-height: 100%
+
+
   p
     margin-right: 15px
     margin-left:5px
     font-weight: 400
     font-size: 80%
 
-.post,.about
+.post,.about,.legal
   width: 100%
   height: 100%
   padding: 70px 120px
@@ -876,10 +883,20 @@ body
         margin-bottom:  20px
         text-decoration: none
 
-
-    
-
+.about
+  width: 100%
+  padding: 70px 0px
+  p,h2,h2,h3,h4
+    padding: 0px 120px
+  ul
+    padding: 0px 120px
+    p 
+      padding: 0px 0px
   
+  .margin
+    padding: 20px 120px
+  
+// Legal
 
     
 
