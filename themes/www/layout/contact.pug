@@ -13,14 +13,23 @@ block body-main
         img(src="/img/Captura.PNG" alt="" srcset="").cabecera_img
   .contact  
     .box_contact
-      h2 
-      p Let`s talk about your project
+      h2 Contactanos
+      p Hablemos sobre tu proyecto
       form(id='contactForm' name='contactForm').form
-        input#name(type='text' placeholder='Nombre' name='name' title='nombre', required)
-        input#email(type='email' placeholder='Email' name='email' title='email' required)
-        input#tel.form-control(type='text' placeholder='Teléfono' name='tel' title='telefono')
-        textarea#msg(type='text' placeholder='Mensaje' name='msg' title='mensaje')
-        input#bpriva(type='submit' value="submit")
+        .inputs
+          .input
+            input#name(type='text' placeholder='Nombre' name='name' title='nombre', required) 
+            .fa-solid.fa-user.color-first 
+          .input
+            input#email(type='email' placeholder='Email' name='email' title='email' required)
+            .fa-solid.fa-envelope.color-first
+          .input
+            input#tel.form-control(type='text' placeholder='Teléfono' name='tel' title='telefono')
+            .fa-solid.fa-phone.color-first
+        .input
+          textarea#msg(type='text' placeholder='Mensaje' name='msg' title='mensaje')
+          .fa-solid.fa-comment.color-first
+        input#bpriva.back-color-first(type='submit' value="Enviar")
 
 block body-footer
   include includes/footer

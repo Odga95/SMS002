@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@800&family=Poppins:wght@300&display=swap');
 
 
 font-xs = 0.8em
@@ -12,6 +11,7 @@ font-xxl = 2.5em
 fontfam1 = 'Josefin Sans', sans-serif;
 fontfam2 = 'Aclonica', sans-serif;
 fontfam3 = "Poppins", sans-serif;
+fontfam4 = 'catamaran', sans-serif;
 
 color-white = #ffffff
 color-black = #000000
@@ -147,6 +147,8 @@ transition()
   font-family fontfam2
 .fontfam3
   font-family fontfam3
+.fontfam4
+  font-family fontfam4
 
 .font-xs
   font-size font-xs
@@ -186,7 +188,7 @@ body
   display: flex
 .d-block
   transition 1s
-  display: block
+  display: block 
 .d-none
   transition 1s
   display: none
@@ -201,7 +203,8 @@ body
 .cabecera,
 .cabecera_blog,
 .cabecera_about,
-.cabecera_post
+.cabecera_post,
+.cabecera_cat
   height: 100vh
   width: 100%
 
@@ -210,7 +213,7 @@ body
   background-color:rgba(255, 255, 255, 0.7)
   width: 100%
   height: 100vh !important
-  padding: 70px 20px
+  padding: 50px 20px
   display: flex
   flex-direction: column
   @media movil-xs
@@ -218,19 +221,29 @@ body
   @media tablet
     padding-top 90px
     padding-left 70px 
+    width: 100%
+  @media escritorio-s
     width: 50%
+
+  cl
   
 .cabecera_paragraph
   margin-bottom:20px
   margin-top: 15px
   -webkit-text-stroke: 0.5px color-letter;
   p
-    font-size: font-xs
+    font-size: 15px
+    @media movil-xs
+      font-size: font-xs
+
+
 .cabecera_title
   margin-bottom:20px
   margin-top: auto
   font-size 20px
   @media movil-xs
+    font-size 20px
+  @media escritorio-s
     font-size 24px
 
   p
@@ -252,6 +265,18 @@ body
     width 50%
     @media tablet
       width 40%
+    .cabecera_aside_img
+      img
+        width: 85%
+        margin-left 180%
+        -webkit-transform:scale(5);
+        transform:scale(5)
+        @media movil
+          margin-left 120%
+        @media tablet
+          margin-left 70%
+
+
 
 .cabecera_post
   height: 100vh
@@ -269,9 +294,15 @@ body
       height: 100%
       object-fit: none 
 
-.main
+.main,.main_blog
   width 100%
   height: 100%
+.main_blog
+  display: flex
+  flex-direction: column
+  @media tablet
+    flex-direction: row
+    
 
 .cabecera_button
   width: fit-content
@@ -302,7 +333,7 @@ body
 
 .cabecera_aside
   height: 100% !important
-  width:50%
+  width:60%
   position: absolute
   top 0
   right:0
@@ -315,29 +346,105 @@ body
       width: 100%
       height: 100%
       border-radius 100%
-      margin-right: auto
+      -webkit-transform:scale(6);
+      transform:scale(6)
+      transition: 1s
+      margin-left: 250%
+      @media movil
+        width: 100%
+        height: 100%
+        border-radius 100%
+        -webkit-transform:scale(3);
+        transform:scale(3)
+        transition: 1s
+        margin-left: 100%
+        margin-right: auto
       @media tablet
         width: 100%
         height: 100%
-        -webkit-transform:scale(2);
-        transform:scale(2)
+        -webkit-transform:scale(2.4);
+        transform:scale(2.4)
         border-radius 100%
         display: block
         margin-left: 70%
         margin-right: auto
+      @media escritorio-s
+        -webkit-transform:scale(2);
+        transform:scale(2)
 
 .banner_doble
   position: relative
 
 .cabecera_about
   .cabecera_section
+    background: rgba(0, 0, 0, 0.589)
     width: 100% !important
   .cabecera_aside
     width: 100% !important  
     .cabecera_aside_img
       width: 100% !important
       img
+        -webkit-transform:scale(1);
+        transform:scale(1)
+        border-radius 0%
         margin-left: 0%
+        object-fit: cover
+
+
+.cabecera_cat
+  width: 100% !important
+  .cabecera_section
+    width: 100% !important
+    .category,.tag
+      width: 100%
+      height: 100%
+      padding 30px 10px
+      position: relative
+      @media movil
+        padding 40px 20px
+      @media tablet
+        padding 50px
+      @media escritorio-s
+        padding 100px 120px
+      ul
+        width: 100%
+        height: 350px
+        overflow-y: auto
+
+        li
+          list-style: none
+          max-width: fit-content
+          height: fit-content
+          a
+            display block
+            width: fit-content
+            text-decoration: none
+
+      .backg
+        position: absolute
+        top 50%
+        left: 70%
+        transform: translate(-50%, -50%);
+        max-width: 450px
+        height: 300px
+        z-index: -1
+        img
+          opacity: 0.75
+          width: 100%
+          height: 100%
+          object-fit: cover
+
+  .cabecera_aside
+    width: 100% !important  
+    .cabecera_aside_img
+      width: 100% !important
+      img
+        -webkit-transform:scale(1);
+        transform:scale(1)
+        border-radius 0%
+        margin-left: 0%
+        object-fit: cover
+
 
 .cabecera_contact
   .cabecera_section
@@ -562,9 +669,12 @@ body
   @media movil-xs
     padding: 50px 30px
     font-size 100%
-  @media tablet
+  @media tablet 
+    padding 50px 50px
+  @media escritorio-s
     font-size 100%
     padding: 90px 200px
+
 
 .banner_slider
   margin-bottom: 40px
@@ -576,17 +686,39 @@ body
   justify-content: center
   align-items: center
   text-align: left
+  flex-direction: column
   padding-bottom: 20px
   padding-top: 20px
   text-align: justify 
+  width: 100%
+  @media movil
+    flex-direction: row  
+
   .text-testimonial
-    width: 70%
-    padding-left:  50px
-    padding-right:  50px
+    width: 90%
+    padding-left:  20px
+    padding-right:  20px
+    @media movil
+      width: 70%
+      padding-left:  50px
+      padding-right:  50px
+    @media tablet
+      width:80%
+
     h3
       padding-bottom:  15px
       font-weight: 100
       text-transform: capitalize
+      text-align: left
+      font-size: font-s
+      @media movil
+        font-size: font-l
+
+    p
+      font-size: 80%
+      @media movil
+        font-size: 100%
+        
      
   .img-testimonial
     width : 120px
@@ -600,16 +732,25 @@ body
     margin-left: 100%
 
 .banner_box2
-  flex-direction: row-reverse
+  flex-direction: column
+  @media movil
+    flex-direction: row-reverse
 
 .banner_cards
   width: 100%
   height: 100%
-  padding: 40px 40px
+  padding: 40px 10px
   display: flex
   justify-content: center
   align-items: center
   flex-wrap: wrap
+  @media movil-xs
+    padding: 40px 15px
+  @media movil-s  
+    padding: 40px 20px
+  @media tablet
+    padding: 40px 40px
+
   h2
     text-align: center
     margin: 20px
@@ -689,15 +830,21 @@ body
   padding: 40px
   display: flex
   flex-wrap: wrap
-  align-items: center
+  align-items: flex-start
   justify-content: center
+  align-items: center
   h2
     text-align: center
   
   .marca_container
     width: 250px
     height: 150px
-    margin 0px 30px
+    margin 10px 30px
+    @media movil
+      margin-top 10px
+      margin-left: auto
+      margin-right: auto
+
     img
       width 100%
       height: 100%
@@ -707,11 +854,23 @@ body
       filter: grayscale(100%);
 
   .calidad_box
-    margin 30px
-    width: 33%
-    height: 300px
+    width: 100%
+    margin-top: 40px
+    height: auto
     display: flex
+    flex-direction: column
     justify-content: center
+    align-items: center
+    @media movil
+      align-items: flex-start
+      flex-direction: row
+      width: 60%
+    @media tablet
+      width: 50%
+    @media escritorio-s
+      
+      margin 30px
+      width: 33%
     .calidad_icon
       width 20%
       height: 100%
@@ -727,12 +886,18 @@ body
 // BLOG
 
 .blog_container 
-  width: 75%
+  width: 100%
   height: 100%
-  padding: 50px 70px
+  padding: 50px 10px
   display flex
   flex-direction: column
   align-items: center
+  @media movil
+    padding: 50px 40px
+  @media tablet
+    width: 75%
+  @media escritorio-s
+    padding: 50px 70px
 
   .blog_box
     width: 100%
@@ -748,21 +913,33 @@ body
       flex-direction: column
       justify-content: left
       align-items: flex-start
-      flex-direction: row
-
+      flex-direction: column
+      @media tablet
+        flex-direction: row
       .blog_img
-        width: 30%
-        height: 250px
-        padding: 0px 10px
+        width: 100%
+        margin auto
+        height: 350px
+        padding: 0px
+        @media movil
+          padding: 0px 10px
+        @media tablet
+          width: 30%
+          height: 250px
         img
           width: 100%
           height: 100%
           border-radius 10px
           object-fit: cover
       .blog_text
-        width: 70%
+        width: 100%
         height: 100%
         padding: 0px 10px
+        @media tablet
+          width: 70%
+          height: 100%
+        @media escritorio-s
+          font-size: 100%
         h2
           font-size: 110%
         .blog_info
@@ -772,6 +949,8 @@ body
           font-size: 65%
           color color-letter
           padding: 0px 15px
+          flex-wrap: wrap
+        
           .blog_category,
           .blog_tag,
           .blog_date,
@@ -802,6 +981,7 @@ body
 
     .box_link   
       margin-left 30%
+      margin-top: 10px
       .blog_button
         border none
         border-radius 10px
@@ -820,14 +1000,16 @@ body
         margin-left: 40px
         transition 0.4s
 .cat-tag
-  width: 25%
+  width: 100%
   height: 100%
   padding: 50px 40px
   display flex
   flex-direction: column
   align-items: center
   text-align: left
-  .box_category,.tag
+  @media tablet
+    width: 25%
+  .box_category,.box_tags
     width 100%
     h3
       margin-bottom: 20px
@@ -874,9 +1056,19 @@ body
 .post,.about,.legal
   width: 100%
   height: 100%
-  padding: 70px 120px
+  padding: 50px 10px
   display: flex
   flex-direction: column
+  font-size: 70%
+  @media movil
+    font-size: 80%
+    padding: 50px 20px
+  @media tablet
+    padding: 70px
+    font-size: 85%
+  @media escritorio-s
+    padding: 70px 120px
+    font-size: 100%
   p,h2
     margin-bottom: 20px
   h2
@@ -933,13 +1125,200 @@ body
   justify-content: center
   align-items: center
   .box_contact
-    padding: 100px 120px
+    padding: 100px 10px
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
+    @media tablet
+      padding: 100px 120px
+    .form
+      width: 100%
+      height: 100%
+      display: flex
+      flex-direction: column
+      .inputs
+        width: auto
+        height: 100%
+        display: flex
+        flex-direction: column
+        @media movil
+          flex-direction: row
+
+      .input
+        width: auto
+        height: 100%
+        position: relative
+        margin 10px 10px
+        @media movil
+          margin 40px 10px
+        @media tablet
+          margin 40px 20px
+        input,textarea
+          width: 100%
+          padding: 10px 10px 10px 40px
+          border 1px solid rgba(214, 214, 214, 0.795)
+          font-family: fontfam3
+        .fa-solid
+          position: absolute
+          top: 50%;
+          left: 0%;
+          margin-left 20px
+          transform: translate(-50%, -50%)
+      textarea
+        width: 100%
+        height: 180px
+        padding: 10px 10px 10px 40px
+        border 1px solid rgba(214, 214, 214, 0.795)
+        font-family: fontfam3
+    
+      .fa-comment
+        position: absolute
+        top: 0% !important
+        left: 0%;
+        margin-left 20px
+        margin-top: 20px
+        transform: translate(-50%, -50%)
+      #bpriva
+        border: 1px solid rgba(201, 201, 201, 0.781)
+        padding: 10px 40px
+        color white
+        width fit-content
+        margin auto
+        border-radius 4px
+        font-size: 110%
+        @media movil
+          margin-left: auto
+          margin-right:  20px
+
+    
+// servicios
+
+.service
+  width: 100%
+  height: 100%
+  .reverse
+      @media tablet
+        flex-direction: row-reverse !important
+  .service_banner
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    padding 40px 0px
+    flex-direction: column
+    text-align: center !important
+    @media tablet
+      flex-direction: row
+    
+    .service_text
+      display: block !important
+      text-align: center
+      h2
+        font-weight: 800;
+        font-size: 45px;
+      p
+        padding: 20px 120px
+        text-align: justify;
+    
+    .service_section
+      width: 50%
+      height: 100%
+      position: relative
+      .service_circles
+        position: absolute
+        width: 100%
+        height: 100%
+        top 0
+        left: 0
+        .circle
+          width: 100%
+          height: 50%
+          display: flex
+          align-items: flex-start
+          .cir
+            border-radius 100%
+            height:150px
+            width 150px
+            margin-left: 20px
+            background: rgb(0,166,166);
+            background: -moz-linear-gradient(90deg, rgba(0,166,166,1) 3%, rgba(0,205,207,1) 54%, rgba(126,217,218,0.5942752100840336) 100%);
+            background: -webkit-linear-gradient(90deg, rgba(0,166,166,1) 3%, rgba(0,205,207,1) 54%, rgba(126,217,218,0.5942752100840336) 100%);
+            background: linear-gradient(90deg, rgba(0,166,166,1) 3%, rgba(0,205,207,1) 54%, rgba(126,217,218,0.5942752100840336) 100%);
+        .circle_right
+          margin-left: auto !important
+          margin-right: 0%
+          margin-top auto
+          margin-bottom: 0%
+          background: rgb(126,217,218) !important
+          background: -moz-linear-gradient(90deg, rgba(126,217,218,0.5942752100840336) 0%, rgba(0,205,207,1) 47%, rgba(0,166,166,1) 98%) !important
+          background: -webkit-linear-gradient(90deg, rgba(126,217,218,0.5942752100840336) 0%, rgba(0,205,207,1) 47%, rgba(0,166,166,1) 98%) !important
+          background: linear-gradient(90deg, rgba(126,217,218,0.5942752100840336) 0%, rgba(0,205,207,1) 47%, rgba(0,166,166,1) 98%) !important
+      .service_img
+        width: 100%
+        height: 100%
+        padding: 20px 50px
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+    .service_content
+      width: 50%
+      height: 100%
+      padding: 20px
+      text-align: left !important
+      .subtitle
+        font-weight: 600
+        margin-bottom: 30px
+      h2
+        margin-bottom: 30px
+        font-weight: 800;
+        font-size: 45px;
+        line-height: 1.2
+
+// Category - Tag
+
+.category,.tag
+  width: 100%
+  height: 100%
+  padding 30px 10px
+  position: relative
+  @media movil
+    padding 40px 20px
+  @media tablet
+    padding 50px
+  @media escritorio-s
+    padding 100px 120px
+
+  ul
+    width: 100%
+    height: 100%
+    overflow-y: auto
+
+    li
+      list-style: none
+      max-width: fit-content
+      height: fit-content
+      a
+        display block
+        width: fit-content
+        text-decoration: none
+
+  .backg
+    position: absolute
+    top 50%
+    left: 70%
+    transform: translate(-50%, -50%);
+    width: 450px
+    height: 300px
+    z-index: -1
+    img
+      opacity: 0.75
+      width: 100%
+      height: 100%
+      object-fit: cover
 
 
 
     
-
