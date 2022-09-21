@@ -224,8 +224,6 @@ body
     width: 100%
   @media escritorio-s
     width: 50%
-
-  cl
   
 .cabecera_paragraph
   margin-bottom:20px
@@ -248,7 +246,6 @@ body
 
   p
     font-weight: 600
-    margin-left 30px
     margin-bottom:auto
     margin-top: auto
     display: none
@@ -276,8 +273,6 @@ body
         @media tablet
           margin-left 70%
 
-
-
 .cabecera_post
   height: 100vh
   .cabecera_section
@@ -294,15 +289,14 @@ body
       height: 100%
       object-fit: none 
 
-.main,.main_blog
-  width 100%
-  height: 100%
-.main_blog
-  display: flex
-  flex-direction: column
-  @media tablet
-    flex-direction: row
-    
+  .main,.main_blog
+    width 100%
+    height: 100%
+  .main_blog
+    display: flex
+    flex-direction: column
+    @media tablet
+      flex-direction: row
 
 .cabecera_button
   width: fit-content
@@ -491,7 +485,6 @@ body
   @media tablet
     font-size 100%
     padding: 90px 200px
-
   img
     opacity: 0.3
     position: absolute
@@ -500,12 +493,12 @@ body
     @media movil
       width: auto
       height: 50%
-
-.banner_title
-  margin-bottom: 20px
-.banner_paragraph
+  h2,h3,h4,h5,h6,.banner_title
+    margin-bottom: 20px
+    color color-title
   p
     margin-bottom: 20px
+    color color-letter
 .banner_doble-left,.banner_doble-right
   width 100%
   height: 0%
@@ -540,6 +533,7 @@ body
   height: auto
   padding:0px 20px
   flex-direction: column
+  justify-content: center
   margin: auto
   @media tablet
     flex-direction: row
@@ -654,7 +648,6 @@ body
 
 
 
-// INDEX - testimonials 
 
 .banner_testimonial
   width: 100%
@@ -669,12 +662,9 @@ body
   @media movil-xs
     padding: 50px 30px
     font-size 100%
-  @media tablet 
-    padding 50px 50px
-  @media escritorio-s
+  @media tablet
     font-size 100%
-    padding: 90px 200px
-
+    padding: 90px 150px
 
 .banner_slider
   margin-bottom: 40px
@@ -686,39 +676,17 @@ body
   justify-content: center
   align-items: center
   text-align: left
-  flex-direction: column
   padding-bottom: 20px
   padding-top: 20px
   text-align: justify 
-  width: 100%
-  @media movil
-    flex-direction: row  
-
   .text-testimonial
-    width: 90%
-    padding-left:  20px
-    padding-right:  20px
-    @media movil
-      width: 70%
-      padding-left:  50px
-      padding-right:  50px
-    @media tablet
-      width:80%
-
+    width: 70%
+    padding-left:  50px
+    padding-right:  50px
     h3
       padding-bottom:  15px
       font-weight: 100
       text-transform: capitalize
-      text-align: left
-      font-size: font-s
-      @media movil
-        font-size: font-l
-
-    p
-      font-size: 80%
-      @media movil
-        font-size: 100%
-        
      
   .img-testimonial
     width : 120px
@@ -732,27 +700,19 @@ body
     margin-left: 100%
 
 .banner_box2
-  flex-direction: column
-  @media movil
-    flex-direction: row-reverse
+  flex-direction: row-reverse
 
 .banner_cards
   width: 100%
   height: 100%
-  padding: 40px 10px
+  padding: 40px 40px
   display: flex
   justify-content: center
   align-items: center
   flex-wrap: wrap
-  @media movil-xs
-    padding: 40px 15px
-  @media movil-s  
-    padding: 40px 20px
-  @media tablet
-    padding: 40px 40px
-
   h2
     text-align: center
+    width: 100%
     margin: 20px
 
   .card_box
@@ -804,6 +764,7 @@ body
         text-overflow ellipsis
         font-size: 85%
       .card_icon 
+        text-decoration: none
         width: 30%
         height: 100%
         display: flex
@@ -813,7 +774,7 @@ body
         transition 0.4s
         color white
       .card_icon:hover
-        background: rgba(0, 0, 255, 0.836)
+        background: rgba(255, 255, 255, 0.836)
   .card_box:hover .card_info
     opacity: 1
     background: rgba(56, 56, 56, 0.164)
@@ -823,7 +784,7 @@ body
   .card_box:hover .card_icon 
     background: white
     color color-first
-
+    
 .banner_calidad,.banner_marcas 
   width: 100%
   height: 100%
@@ -879,8 +840,6 @@ body
       width: 80%
       height: 100%
       font-size: 80%
-      h2
-        text-align: left
 
 
 // BLOG
@@ -902,6 +861,9 @@ body
   .blog_box
     width: 100%
     height: 100%
+    a
+      text-decoration: none
+      color: color-letter
     .divide
       margin-top 40px
       margin-bottom:40px
@@ -959,6 +921,7 @@ body
             display: flex
             margin-right: 5px
             margin-left:5px
+            flex-direction: row
             align-items: flex-end
           p
             margin-right: 15px
@@ -991,6 +954,7 @@ body
       :hover
         background: gray 
         color white  
+        border-radius 10px
 
       .fa-share
         text-decoration none
@@ -1032,6 +996,7 @@ body
   width: 100%
   height: auto
   display: flex
+  flex-direction: column
   font-size: 65%
   color color-letter
   padding: 0px 15px
@@ -1045,8 +1010,6 @@ body
     margin-left:5px
     align-items: flex-start
     max-height: 100%
-
-
   p
     margin-right: 15px
     margin-left:5px
@@ -1268,7 +1231,7 @@ body
       height: 100%
       padding: 20px
       text-align: left !important
-      .subtitle
+      .subtitle,h6,h5
         font-weight: 600
         margin-bottom: 30px
       h2
@@ -1276,6 +1239,12 @@ body
         font-weight: 800;
         font-size: 45px;
         line-height: 1.2
+      h6,h5
+        color color-first
+        font-size: font-xs
+      p
+        font-size: font-xs
+
 
 // Category - Tag
 

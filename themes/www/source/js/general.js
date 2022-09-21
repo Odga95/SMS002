@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
         head.classList.toggle("navbar-fixed-top", window.scrollY > 0);
 
     })
-});
 
+    espar(1);
+});
+espar(1);
 
 function menuOpen() {
 
@@ -26,5 +28,13 @@ function menuOpen() {
             document.querySelector('.navbar-nav').style.display = ''
         }, 1);
     }
+}
+
+function espar(num1){
+    var impar = num1%2
+    console.log("impar "+impar)
+    num1 = num1+1;
+    var par = num1%2
+    console.log("par "+par)
 }
 
